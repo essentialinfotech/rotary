@@ -14,9 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.index');
 });
 
+Route::get('front/organization','Admin\AdminController@organization')->name('admin.organization');
+Route::get('front/rlifiles','Admin\AdminController@rlifiles')->name('admin.rlifiles');
+
 Auth::routes();
+Route::get('admin/login','Admin\AdminController@adminLogin')->name('admin.admin_login');
+Route::post('admin/login','Admin\AdminController@login')->name('admin.login');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware'=>['admin']],function(){
+    Route::get('admin/dashboard','Admin\AdminController@dashboard')->name('admin.dashboard');
+    Route::get('admin/update-password','Admin\AdminController@updatePasswordForm')->name('admin.password.form');
+});
