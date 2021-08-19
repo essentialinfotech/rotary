@@ -1,156 +1,150 @@
+
 <!DOCTYPE html>
 <!--
-Author: Keenthemes
-Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme
-Purchase: https://1.envato.market/EA4JP
-Website: http://www.keenthemes.com
+Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
+Author: KeenThemes
+Website: http://www.keenthemes.com/
 Contact: support@keenthemes.com
 Follow: www.twitter.com/keenthemes
 Dribbble: www.dribbble.com/keenthemes
 Like: www.facebook.com/keenthemes
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+Purchase: https://1.envato.market/EA4JP
+Renew Support: https://1.envato.market/EA4JP
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../">
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charset="utf-8" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="Https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="{{asset('assets/admin/assets/media/logos/favicon.ico')}}" />
+		<title>Admin| Login</title>
+		<meta name="description" content="Login page example" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
-		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<!--begin::Page Custom Styles(used by this page)-->
+		<link href="{{asset('assets/admin/assets/css/pages/login/login-1.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Page Custom Styles-->
+		<!--begin::Global Theme Styles(used by all pages)-->
 		<link href="{{asset('assets/admin/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/admin/assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/admin/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<!--end::Global Stylesheets Bundle-->
+		<!--end::Global Theme Styles-->
+		<!--begin::Layout Themes(used by all pages)-->
+		<!--end::Layout Themes-->
+		<link rel="shortcut icon" href="{{asset('assets/admin/assets/media/logos/favicon.ico')}}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="bg-dark">
+	<body id="kt_body" class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-static page-loading">
 		<!--begin::Main-->
 		<div class="d-flex flex-column flex-root">
-			<!--begin::Authentication - Sign-in -->
-			<div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed" style="background-size1: 100% 50%; background-image: url(assets/media/illustrations/development-hd-dark.png)">
-				<!--begin::Content-->
-				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-					<!--begin::Logo-->
-					<a href="../../demo5/dist/index.html" class="mb-12">
-						<img alt="Logo" src="{{asset('assets/admin/assets/media/logos/logo-2.svg')}}" class="h-45px" />
-					</a>
-					<!--end::Logo-->
-					<!--begin::Wrapper-->
-					<div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
-						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="{{route('admin.login')}}" method="post">
-                            @csrf
-							<!--begin::Heading-->
-							<div class="text-center mb-10">
-								<!--begin::Title-->
-								<h1 class="text-dark mb-3">Sign In to Metronic</h1>
-								<!--end::Title-->
-								<!--begin::Link-->
-								<div class="text-gray-400 fw-bold fs-4">New Here?
-								<a href="../../demo5/dist/authentication/flows/dark/sign-up.html" class="link-primary fw-bolder">Create an Account</a></div>
-								<!--end::Link-->
-							</div>
-							<!--begin::Heading-->
-							<!--begin::Input group-->
-							<div class="fv-row mb-2">
-								<!--begin::Label-->
-								<label class="form-label fs-6 fw-bolder text-dark">Email</label>
-								<!--end::Label-->
-								<!--begin::Input-->
-								<input class="form-control form-control-lg form-control-solid" type="text" name="email" autocomplete="off" />
-								<!--end::Input-->
-							</div>
-							<!--end::Input group-->
-							<!--begin::Input group-->
-							<div class="fv-row mb-10">
-								<!--begin::Wrapper-->
-								<div class="d-flex flex-stack mb-2">
-									<!--begin::Label-->
-									<label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
-									<!--end::Label-->
-									
-								</div>
-								<!--end::Wrapper-->
-								<!--begin::Input-->
-								<input class="form-control form-control-lg form-control-solid" type="password" name="password" autocomplete="off" />
-								<!--end::Input-->
-							</div>
-                            <div class="fv-row mb-10">
-								<!--begin::Wrapper-->
-								<div class="d-flex flex-stack mb-2">
-									<a href="../../demo5/dist/authentication/flows/dark/password-reset.html" class="link-primary fs-6 fw-bolder">Forgot Password ?</a>
-									<!--end::Link-->
-								</div>
-							</div>
-							<!--end::Input group-->
-							<!--begin::Actions-->
-							<div class="text-center">
-								<!--begin::Submit button-->
-								<button type="submit"  class="btn btn-lg btn-primary w-100 mb-5">
-									<span class="indicator-label">Continue</span>
-									<span class="indicator-progress">Please wait...
-									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-								</button>
-								<!--end::Submit button-->
-								<!--begin::Separator-->
-								<div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
-								<!--end::Separator-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-								<img alt="Logo" src="{{asset('assets/admin/assets/media/svg/brand-logos/google-icon.svg')}}" class="h-20px me-3" />Continue with Google</a>
-								<!--end::Google link-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
-								<img alt="Logo" src="{{asset('assets/admin/assets/media/svg/brand-logos/facebook-4.svg')}}" class="h-20px me-3" />Continue with Facebook</a>
-								<!--end::Google link-->
-								<!--begin::Google link-->
-								<a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100">
-								<img alt="Logo" src="{{asset('assets/admin/assets/media/svg/brand-logos/apple-black.svg')}}" class="h-20px me-3" />Continue with Apple</a>
-								<!--end::Google link-->
-							</div>
-							<!--end::Actions-->
-						</form>
-						<!--end::Form-->
+			<!--begin::Login-->
+			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+				<!--begin::Aside-->
+				<div class="login-aside d-flex flex-column flex-row-auto" style="background-color: #F2C98A;">
+					<!--begin::Aside Top-->
+					<div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
+						<!--begin::Aside header-->
+						<!-- <a href="#" class="text-center mb-10">
+							<img src="assets/media/logos/logo-letter-1.png" class="max-h-70px" alt="" />
+						</a> -->
+						<!--end::Aside header-->
+						<!--begin::Aside title-->
+						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Rotary Bangladesh
+						<br />Build Your Carier</h3>
+						<!--end::Aside title-->
 					</div>
-					<!--end::Wrapper-->
+					<!--end::Aside Top-->
+					<!--begin::Aside Bottom-->
+					<div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(assets/media/svg/illustrations/login-visual-1.svg)"></div>
+					<!--end::Aside Bottom-->
+				</div>
+				<!--begin::Aside-->
+				<!--begin::Content-->
+				<div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+					<!--begin::Content body-->
+					<div class="d-flex flex-column-fluid flex-center">
+						<!--begin::Signin-->
+						<div class="login-form login-signin">
+							<!--begin::Form-->
+							<form class="form" novalidate="novalidate" id="kt_login_signin_form" method="post" action="{{route('admin.login')}}">
+								@csrf
+								<!--begin::Title-->
+								<div class="pb-13 pt-lg-0 pt-5">
+									<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Welcome to Rotary</h3>
+									<!-- <span class="text-muted font-weight-bold font-size-h4">New Here?
+									<a href="javascript:;" id="kt_login_signup" class="text-primary font-weight-bolder">Create an Account</a></span> -->
+								</div>
+								<!--begin::Title-->
+								<!--begin::Form group-->
+								<div class="form-group">
+									<label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="email" name="email" autocomplete="off" />
+								</div>
+								<!--end::Form group-->
+								<!--begin::Form group-->
+								<div class="form-group">
+									<div class="d-flex justify-content-between mt-n5">
+										<label class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
+										<a href="javascript:;" class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" id="kt_login_forgot">Forgot Password ?</a>
+									</div>
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg" type="password" name="password" autocomplete="off" />
+								</div>
+								<!--end::Form group-->
+								<!--begin::Action-->
+								<div class="pb-lg-0 pb-5">
+									<button type="submit" id="kt_login_signin_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
+									<button type="button" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
+									<span class="svg-icon svg-icon-md">
+										<!--begin::Svg Icon | path:assets/media/svg/social-icons/google.svg-->
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+											<path d="M19.9895 10.1871C19.9895 9.36767 19.9214 8.76973 19.7742 8.14966H10.1992V11.848H15.8195C15.7062 12.7671 15.0943 14.1512 13.7346 15.0813L13.7155 15.2051L16.7429 17.4969L16.9527 17.5174C18.879 15.7789 19.9895 13.221 19.9895 10.1871Z" fill="#4285F4" />
+											<path d="M10.1993 19.9313C12.9527 19.9313 15.2643 19.0454 16.9527 17.5174L13.7346 15.0813C12.8734 15.6682 11.7176 16.0779 10.1993 16.0779C7.50243 16.0779 5.21352 14.3395 4.39759 11.9366L4.27799 11.9466L1.13003 14.3273L1.08887 14.4391C2.76588 17.6945 6.21061 19.9313 10.1993 19.9313Z" fill="#34A853" />
+											<path d="M4.39748 11.9366C4.18219 11.3166 4.05759 10.6521 4.05759 9.96565C4.05759 9.27909 4.18219 8.61473 4.38615 7.99466L4.38045 7.8626L1.19304 5.44366L1.08875 5.49214C0.397576 6.84305 0.000976562 8.36008 0.000976562 9.96565C0.000976562 11.5712 0.397576 13.0882 1.08875 14.4391L4.39748 11.9366Z" fill="#FBBC05" />
+											<path d="M10.1993 3.85336C12.1142 3.85336 13.406 4.66168 14.1425 5.33717L17.0207 2.59107C15.253 0.985496 12.9527 0 10.1993 0C6.2106 0 2.76588 2.23672 1.08887 5.49214L4.38626 7.99466C5.21352 5.59183 7.50242 3.85336 10.1993 3.85336Z" fill="#EB4335" />
+										</svg>
+										<!--end::Svg Icon-->
+									</span>Sign in with Google</button>
+								</div>
+								<!--end::Action-->
+							</form>
+							<!--end::Form-->
+						</div>
+						<!--end::Signin-->
+					
+					</div>
+					<!--end::Content body-->
+					<!--begin::Content footer-->
+					<div class="d-flex justify-content-lg-start justify-content-center align-items-end py-7 py-lg-0">
+						<div class="text-dark-50 font-size-lg font-weight-bolder mr-10">
+							<span class="mr-1">2021©</span>
+							<a href="" target="_blank" class="text-dark-75 text-hover-primary">Rotary</a>
+						</div>
+						<a href="#" class="text-primary font-weight-bolder font-size-lg">Terms</a>
+						<a href="#" class="text-primary ml-5 font-weight-bolder font-size-lg">Plans</a>
+						<a href="#" class="text-primary ml-5 font-weight-bolder font-size-lg">Contact Us</a>
+					</div>
+					<!--end::Content footer-->
 				</div>
 				<!--end::Content-->
-				<!--begin::Footer-->
-				<div class="d-flex flex-center flex-column-auto p-10">
-					<!--begin::Links-->
-					<div class="d-flex align-items-center fw-bold fs-6">
-						<a href="https://keenthemes.com" class="text-muted text-hover-primary px-2">About</a>
-						<a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
-						<a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
-					</div>
-					<!--end::Links-->
-				</div>
-				<!--end::Footer-->
 			</div>
-			<!--end::Authentication - Sign-in-->
+			<!--end::Login-->
 		</div>
 		<!--end::Main-->
-		<!--begin::Javascript-->
-		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<!-- <script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script> -->
+		<!--begin::Global Config(global config for global JS scripts)-->
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
+		<!--end::Global Config-->
+		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="{{asset('assets/admin/assets/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{asset('assets/admin/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
 		<script src="{{asset('assets/admin/assets/js/scripts.bundle.js')}}"></script>
-		<!--end::Global Javascript Bundle-->
-		<!--begin::Page Custom Javascript(used by this page)-->
-		<script src="{{asset('assets/admin/assets/js/custom/authentication/sign-in/general.js')}}"></script>
-		<!--end::Page Custom Javascript-->
-		<!--end::Javascript-->
+		<!--end::Global Theme Bundle-->
+		<!--begin::Page Scripts(used by this page)-->
+		<script src="{{asset('assets/admin/assets/js/pages/custom/login/login-general.js')}}"></script>
+		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->
 </html>

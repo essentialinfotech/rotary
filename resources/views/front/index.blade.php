@@ -1,383 +1,763 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.front_layout.master')
+@section('content')
+ <!-- Bnner Section -->
+    <section class="banner-section">
+        <div class="left-panel">
+            <div class="side-menu-nav sidemenu-nav-toggler"><span class="flaticon-interface"></span>More</div>
+            <div class="option-box">
+                <div class="icon"><span class="flaticon-tracking"></span></div>
+                <h4>Track <br> Shipment</h4>
+                <div class="order-form-area">
+                    <div class="wrapper-box">
+                        <h4>Track Your Shipment</h4>
+                        <form class="order-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Shipment Number *">
+                            </div>
+                            <div class="form-group">
+                                <select class="selectpicker" name="make">
+                                    <option value="*">Type of Reference *</option>
+                                    <option value=".category-1">Package</option>
+                                    <option value=".category-3">Freight</option>
+                                    <option value=".category-4">Mail of Innovations</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>Track Now</span></button>
+                            </div>
+                        </form>
+                    </div>                        
+                </div>
+            </div>
+            <div class="option-box">
+                <a href="pricing-plan.html">
+                    <div class="icon"><span class="flaticon-logistics"></span></div>
+                    <h4>Pricing <br> Plan</h4>
+                </a>
+            </div>
+            <div class="option-box">
+                <a href="grequest-quote.html">
+                    <div class="icon"><span class="flaticon-test"></span></div>
+                    <h4>Get A <br>Quote</h4>
+                </a>
+            </div>
+        </div>
+        <div class="background-text">
+            <div data-parallax='{"x": 100}'>
+                <div class="text-1">transida</div>
+                <div class="text-2">transida</div>
+            </div>                
+        </div>
+        <div class="swiper-container banner-slider">
+            <div class="swiper-wrapper">
+                <!-- Slide Item -->
+                @foreach($sliders as  $slider)
+                <div class="swiper-slide" style="background-image: url({{asset('images/backend_images/sliders/'.$slider->image)}})">
+                    <div class="content-outer">
+                        <div class="content-box">
+                            <div class="inner text-center">
+                                <h4>Competitve rates </h4>
+                                <h1>safety & reliable on-time</h1>
+                                <div class="text">We denounce with righteous indignation & dislike beguiled</div>
+                                <div class="link-box">
+                                    <a href="#" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>More Details </span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+              <!-- Slide Item -->
+               
+        </div>
+        <div class="banner-slider-nav style-two">
+            <div class="banner-slider-control banner-slider-button-prev"><span><i class="far fa-angle-left"></i>Prev</span></div>
+            <div class="banner-slider-control banner-slider-button-next"><span>Next<i class="far fa-angle-right"></i></span> </div>
+        </div>
+    </section>
+    <!-- End Bnner Section -->
 
-<head>
-<title>Rotary Leadership Institute International</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="Keywords" content="rotary,training,education,teach,faculty,participant,student,workshop,leadership,class">
-<meta name="Description" content="The Rotary Leadership Institute International (RLI) is a multi-district, grassroots leadership development program of member districts around the world.">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/front/css/lu-style.css')}}">
-<link rel="stylesheet" href="{{asset('assets/front/css/fontawesome-all.css')}}">
-<script src="{{asset('asstes/front/js/29aab5591d.js')}}" crossorigin="anonymous"></script>
-<link rel="shortcut icon" href="favicon.ico">
-<style>
-.review {
-  position: relative;
-  overflow: hidden;
-}
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <div class="sub-title">Our Services</div>
+                <h2>Moving Your Products Across <br> All Borders</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 service-block-one">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <h4>Air Freight</h4>
+                        <div class="text">How all this mistaken idea of denouncing <br>pleasure and praising ...</div>
+                        <div class="read-more-btn"><a href="air-freight.html" class="link"><i class="flaticon-up-arrow"></i>Read More</a></div>
+                        <div class="count"><span>01</span></div>
+                        <div class="image" data-parallax='{"y": 30}'><img src="{{asset('assets/front/assets/images/resource/image-1.png')}}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 service-block-one">
+                    <div class="inner-box wow fadeInDown" data-wow-duration="1500ms">
+                        <h4>Ocean Freight</h4>
+                        <div class="text">To take a trivial example which of us ever undertakes laborious physical ...</div>
+                        <div class="read-more-btn"><a href="ocean-freight.html" class="link"><i class="flaticon-up-arrow"></i>Read More</a></div>
+                        <div class="count"><span>02</span></div>
+                        <div class="image" data-parallax='{"y": 30}'><img src="{{asset('assets/front/assets/images/resource/image-2.png')}}" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 service-block-one">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <h4>Road Freight</h4>
+                        <div class="text">Right to find fault with man who chooses to enjoy a pleasure that annoying ...</div>
+                        <div class="read-more-btn"><a href="road-freight.html" class="link"><i class="flaticon-up-arrow"></i>Read More</a></div>
+                        <div class="count"><span>03</span></div>
+                        <div class="image" data-parallax='{"y": 30}'><img src="{{asset('assets/front/assets/images/resource/image-3.png')}}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.topleft {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  font-size: 18px;
-	margin: auto;
-	padding:20px;
-}
+    <!-- About Section -->
+    <section class="about-section" id="about" style="background-image: url({{asset('assets/front/assets/images/background/bg-1.jpg')}}">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="sec-title">
+                        <div class="sub-title">Company</div>
+                        <h2>Provide a <br> Reliable Services <br> Since 1942</h2>
+                        <div class="text">Denounce with righteous indignation and dislike men who are  beguiled <br> and demoralized by the charms of pleasure of the moment so blinded by <br> desire, that they cannot foresee the pain and trouble.</div>
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="icon-box wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="icon"><span class="flaticon-package"></span></div>
+                                <div class="content">
+                                    <a href="about.html"><h4>About <br>Our Company</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="icon"><span class="flaticon-goal"></span></div>
+                                <div class="content">
+                                    <a href="about.html"><h4>Statement of <br> Mission</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box wow fadeInUp" data-wow-duration="1700ms">
+                                <div class="icon"><span class="flaticon-binoculars"></span></div>
+                                <div class="content">
+                                    <a href="about.html"><h4>Statement of <br> Vision</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="icon-box wow fadeInUp" data-wow-duration="1900ms">
+                                <div class="icon"><span class="flaticon-gold"></span></div>
+                                <div class="content">
+                                    <a href="about.html"><h4>Statement of <br> Value</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image wow fadeInRight" data-wow-duration="1500ms"><img src="{{asset('assets/front/assets/images/resource/image-1.jpg')}}" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</style>
-</head>
+    <!-- Whychooseus Section -->
+    <section class="Whychooseus-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <div class="sub-title text-center">Why Choose Us</div>
+                <h2>We Aim to Contribute Well to <br>  Your Company</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 why-choose-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="icon"><span class="count">01</span><i class="flaticon-shield"></i></div>
+                        <div class="content">
+                            <h4>Trasparent Pricing</h4>
+                            <div class="text">Indignation and dislike men who are so beguiled all <br> moralized by the charms.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 why-choose-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="icon"><span class="count">02</span><i class="flaticon-delivery"></i></div>
+                        <div class="content">
+                            <h4>On - Time Delivery</h4>
+                            <div class="text">Foresee the pain and trouble that are bound ensue <br> and equal blame belongs to fail duty.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 why-choose-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="icon"><span class="count">03</span><i class="flaticon-24-hours"></i></div>
+                        <div class="content">
+                            <h4>Real Time Tracking</h4>
+                            <div class="text">These cases are perfectly simple easy distinguish <br> in a free hour of choice when our power.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 why-choose-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="icon"><span class="count">04</span><i class="flaticon-24-hours"></i></div>
+                        <div class="content">
+                            <h4>24/7 Online Support</h4>
+                            <div class="text">Indignation and dislike men who are so beguiled all <br> moralized by the charms.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Work-process Section -->
+    <section class="work-process-section" id="work">
+        <div class="bg" style="background-image: url({{asset('assets/front/assets/images/background/bg-2.jpg')}}"></div>
+        <div class="auto-container">
+            <div class="sec-title text-center light">
+                <div class="sub-title text-center">How We Work</div>
+                <h2>We Aim to Contribute Well to <br> Your Company</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 work-process-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="count">01</div>
+                        <div class="icon"><span class="flaticon-shipping"></span></div>
+                        <h4>Replenishment <br> & Picking</h4>
+                        <div class="text">Dolores quas molestias <br>  excepturi occaecati cupiditated <br> non provident.</div>
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 work-process-block">
+                    <div class="inner-box wow fadeInDwon" data-wow-duration="1500ms">
+                        <div class="count">02</div>
+                        <div class="icon"><span class="flaticon-warehouse"></span></div>
+                        <h4>Warehousing <br> Operation</h4>
+                        <div class="text">It will frequently occur
+                            that pleasures have to repudiated
+                            annoyances accepted.</div>
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 work-process-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="count">03</div>
+                        <div class="icon"><span class="flaticon-packing-list"></span></div>
+                        <h4>Packaging <br> & Distribution</h4>
+                        <div class="text">Ever undertakes laborious
+                            physical exercise excepts obtain
+                            some advantage right.</div>
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 work-process-block">
+                    <div class="inner-box wow fadeInDown" data-wow-duration="1500ms">
+                        <div class="count">04</div>
+                        <div class="icon"><span class="flaticon-delivery-1"></span></div>
+                        <h4>Transportation <br> Process</h4>
+                        <div class="text">Nothing prevents our
+                            being able to do what like work
+                            best every pleasure </div>
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-text">Simplifying Your Freight & Logistics Needs With a Personal Approach. <a href="contact.html"> Get In Touch</a></div>
+        </div>
+    </section>
 
-<body id="myPage">
+    <!-- Industries Covered -->
+    <section class="industries-covered" style="background-image: url({{asset('assets/front/assets/images/background/bg-3.jpg')}}">
+        <div class="background-text" data-parallax='{"x": 100}'>industries</div>
+        <div class="outer-box side-container">
+            <div class="outer-container">
+                <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "1" } , "992":{ "items" : "1" }, "1200":{ "items" : "1" }}}'>
+                    <div class="text-block">
+                        <div class="inner-box">
+                            <div class="image" style="background-image: url({{asset('assets/front/assets/images/resource/image-2.jpg')}})">
+                            </div>
+                            <div class="content">
+                                <div class="icon"><span class="flaticon-spaceship"></span></div>
+                                <h4>Industrial and <br> Aerospace</h4>
+                                <div class="text">The wise man therefore always holds in <br> these matters to this principle. </div>
+                                <div class="link">
+                                    <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <div class="inner-box">
+                            <div class="image" style="background-image: url({{asset('assets/front/assets/images/resource/image-4.jpg')}}}">
+                            </div>
+                            <div class="content">
+                                <div class="icon"><span class="flaticon-spaceship"></span></div>
+                                <h4>Construction <br> Companies</h4>
+                                <div class="text">The wise man therefore always holds in <br> these matters to this principle. </div>
+                                <div class="link">
+                                    <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <div class="inner-box">
+                            <div class="image" style="background-image: url({{asset('assets/front/assets/images/resource/image-5.jpg')}})">
+                            </div> <div class="image">
+                                <img src="{{asset('assets/front/assets/images/resource/image-5.jpg')}}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="icon"><span class="flaticon-box-1"></span></div>
+                                <h4>Vehicle <br> Manufacturing</h4>
+                                <div class="text">The wise man therefore always holds in <br> these matters to this principle. </div>
+                                <div class="link">
+                                    <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <div class="sub-title text-center">Pricing & Plans</div>
+                <h2>Our Effective and Affordable <br> Pricing Plans</h2>
+            </div>
+            <div class="row m-0">
+                <div class="col-lg-4 col-md-6 pricing-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="category-wrapper"><div class="category">Basic Plan</div></div>
+                        <div class="price">$89.99</div>
+                        <div class="time">Per Month</div>
+                        <ul class="content">
+                            <li>1 Warehouse </li>
+                            <li>Custom Business Rules</li>
+                            <li>Real Time Rate Shopping</li>
+                            <li>100% Insurance</li>
+                            <li>50 Freight Shipments</li>
+                        </ul>
+                        <div class="link-box">
+                            <a href="#" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>Buy Now </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pricing-block style-two">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" style="background-image: url(assets/images/resource/image-3.jpg);">
+                        <div class="category-wrapper"><div class="category">Standard Plan</div></div>
+                        <div class="price">$129.99</div>
+                        <div class="time">Per Month</div>
+                        <ul class="content">
+                            <li>1 Warehouse </li>
+                            <li>Custom Business Rules</li>
+                            <li>Real Time Rate Shopping</li>
+                            <li>100% Insurance</li>
+                            <li>50 Freight Shipments</li>
+                        </ul>
+                        <div class="link-box">
+                            <a href="#" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>Buy Now </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pricing-block">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="category-wrapper"><div class="category">Advanced Plan</div></div>
+                        <div class="price">$149.99</div>
+                        <div class="time">Per Month</div>
+                        <ul class="content">
+                            <li>1 Warehouse </li>
+                            <li>Custom Business Rules</li>
+                            <li>Real Time Rate Shopping</li>
+                            <li>100% Insurance</li>
+                            <li>50 Freight Shipments</li>
+                        </ul>
+                        <div class="link-box">
+                            <a href="#" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>Buy Now </span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-blue">Close
-    <i class="fas fa-remove"></i>
-  </a>
-  <a href="{{url('/')}}#top" class="w3-bar-item w3-button">Home</a>
-  <a href="#about" class="w3-bar-item w3-button">About</a>
-  <a href="organization.html" class="w3-bar-item w3-button">Organization</a>
-  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-</nav>
+    <!-- Facts Section -->
+    <section class="facts-section">
+        <div class="auto-container">
+            <div class="wrapper-box" style="background-image: url({{asset('assets/front/assets/images/background/bg-4.jpg')}});">
+                <div class="shape">
+                    <div class="shape-one"><img src="{{asset('assets/front/assets/images/resource/image-4.png')}}" alt=""></div>
+                    <div class="shape-two"><img src="{{asset('assets/front/assets/images/resource/image-5.png')}}" alt=""></div>
+                    <div class="shape-three"><img src="{{asset('assets/front/assets/images/resource/image-6.png')}}" alt=""></div>
+                    <div class="shape-four"><img src="{{asset('assets/front/assets/images/resource/image-7.png')}}" alt=""></div>
+                    <div class="shape-five"><img src="{{asset('assets/front/assets/images/resource/image-8.png')}}" alt=""></div>
+                </div>
+                <div class="sec-title text-center light">
+                    <div class="sub-title text-center">Interesting Facts</div>
+                    <h2>The Numbers Speak for <br> themselves</h2>
+                </div>
+                <div class="outer-box">
+                    <div class="row">
+                        <!--Column-->
+                        <div class="column counter-column col-md-6">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="{{asset('assets/front/assets/images/icons/icon-3.png')}}" alt=""></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="6500">0</span>
+                                    </div>
+                                    <div class="text">Parcel Delivered</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Column-->
+                        <div class="column counter-column col-md-6">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="{{asset('assets/front/assets/images/icons/icon-4.png')}}" alt=""></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="254">0</span>
+                                    </div>
+                                    <div class="text">Expert Employee</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Column-->
+                        <div class="column counter-column col-md-6">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="{{asset('assets/front/assets/images/icons/icon-5.png')}}" alt=""></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="2495">0</span>
+                                    </div>
+                                    <div class="text">Satisfied Clients</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Column-->
+                        <div class="column counter-column col-md-6">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="{{asset('assets/front/assets/images/icons/icon-3.png')}}" alt=""></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="145">0</span>
+                                    </div>
+                                    <div class="text">Branches Across</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Column-->
+                        <div class="column counter-column col-md-6">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="{{asset('assets/front/assets/images/icons/icon-3.png')}}" alt=""></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="3879">0</span>
+                                    </div>
+                                    <div class="text">Tons of Goods</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonial">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <div class="sub-title text-center">Testimonials</div>
+                <h2>1000+ Happy Customers Said</h2>
+            </div>
+            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "2" }, "1200":{ "items" : "3" }}}'>
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">I am highly impressed with
+                            the professionalism and passion
+                            of people in this warehouse
+                            very neat & clean.
+                        </div>
+                        <div class="author-thumb">
+                            <img src="{{asset('assets/front/assets/images/resource/author-1.jpg')}}" alt="">
+                            <div class="quote"><span class="flaticon-right-quote"></span>
+                            </div>
+                        </div>
+                        <h4>Nathan Felix</h4>
+                        <div class="designation">CEO, High Rise Construction</div>
+                        <div class="rating">
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">The staff is amazing! 
+                            Very helpful and considerate
+                            with a sense of urgency &Loads
+                            are 99% on time.
+                        </div>
+                        <div class="author-thumb">
+                            <img src="{{asset('assets/front/assets/images/resource/author-2.jpg')}}" alt="">
+                            <div class="quote"><span class="flaticon-right-quote"></span>
+                            </div>
+                        </div>
+                        <h4>Lillian Grace</h4>
+                        <div class="designation">VP, Green Valley Intenationl</div>
+                        <div class="rating">
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="text">I only use Transida Logistics
+                            for my shipping needs. My clients
+                            have all come to expect the
+                            excellent shipping.
+                        </div>
+                        <div class="author-thumb">
+                            <img src="{{asset('assets/front/assets/images/resource/author-3.jpg')}}" alt="">
+                            <div class="quote"><span class="flaticon-right-quote"></span>
+                            </div>
+                        </div>
+                        <h4>Roman Dexter</h4>
+                        <div class="designation">Business Man, Newyork, USA</div>
+                        <div class="rating">
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                            <span class="flaticon-star-1"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+            </div>
+        </div>
+    </section>
 
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fas fa-bars"></i></a>
-  <a href="#top" class="w3-bar-item w3-button w3-blue"><i class="fas fa-home w3-margin-right"></i>Home</a>
-  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About RLI</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="dropdown">Our Organization<i class="fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="{{route('admin.organization')}}#officers" class="w3-bar-item w3-button">Officers</a>
-      <a href="{{route('admin.organization')}}#divisions" class="w3-bar-item w3-button">Divisions</a>
-      <a href="{{route('admin.organization')}}#documents" class="w3-bar-item w3-button">Financial Statements</a>
-      <a href="{{route('admin.organization')}}#documents" class="w3-bar-item w3-button">Annual Reports</a>
-      <a href="{{route('admin.organization')}}#documents" class="w3-bar-item w3-button">Newsletters</a>
-      <a href="{{route('admin.organization')}}#awards" class="w3-bar-item w3-button">Awards</a>
-    </div>
-  </div>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-  <a href="{{route('admin.rlifiles')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">RLI Files</a>
- </div>
+    <!-- News Section -->
+    <section class="news-section" id="blog">
+        <div class="auto-container">
+            <div class="sec-top row m-0 justify-content-md-between align-items-center">
+                <div class="sec-title">
+                    <div class="sub-title">News & Updates</div>
+                    <h2>Latest From Our Blog Post</h2>
+                </div>
+                <div class="link">
+                    <a href="blog.html" class="readmore-link"><i class="flaticon-up-arrow"></i>Read All News</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="news-block-one col-lg-4">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-1.jpg')}}" alt=""></a>
+                            <div class="date">25 <br> Jun</div>
+                        </div>
+                        <div class="lower-content">
+                            <div class="category"><i class="fas fa-folder"></i> Freight Management</div>
+                            <h3><a href="blog-details.html">Trends in Freight Transportation <br>  & the COVID-19 Impact</a></h3>
+                            <div class="text">Enjoy pleasures that has annoying consequences <br>  or one who avoids a pain ...</div>
+                            <div class="link">
+                                <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="image">
+                                <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-1-2.jpg')}}" alt=""></a>
+                                <div class="date">25 <br> Jun</div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="category"><i class="fas fa-folder"></i> Freight Management</div>
+                                <h3><a href="blog-details.html">Trends in Freight Transportation <br>  & the COVID-19 Impact</a></h3>
+                                <div class="link">
+                                    <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-block-one col-lg-4">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-2.jpg')}}" alt=""></a>
+                            <div class="date">14 <br> May</div>
+                        </div>
+                        <div class="lower-content">
+                            <div class="category"><i class="fas fa-folder"></i> Industry News</div>
+                            <h3><a href="blog-details.html">Named a Finalist For Year 2019 <br> Best Choice Award</a></h3>
+                            <div class="text">Enjoy pleasures that has annoying consequences <br>  or one who avoids a pain ...</div>
+                            <div class="link">
+                                <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="image">
+                                <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-2-2.jpg')}}" alt=""></a>
+                                <div class="date">14 <br> May</div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="category"><i class="fas fa-folder"></i> Industry News</div>
+                                <h3><a href="blog-details.html">Named a Finalist For Year 2019 <br> Best Choice Award</a></h3>
+                                <div class="link">
+                                    <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-block-one col-lg-4">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-3.jpg')}}" alt=""></a>
+                            <div class="date">05 <br> May</div>
+                        </div>
+                        <div class="lower-content">
+                            <div class="category"><i class="fas fa-folder"></i> Warehousing</div>
+                            <h3><a href="blog-details.html">Conditions for Applying C / O for <br> Transited Goods</a></h3>
+                            <div class="text">Enjoy pleasures that has annoying consequences <br>  or one who avoids a pain ...</div>
+                            <div class="link">
+                                <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="image">
+                                <a href="blog-details.html"><img src="{{asset('assets/front/assets/images/resource/news-3-2.jpg')}}" alt=""></a>
+                                <div class="date">05 <br> May</div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="category"><i class="fas fa-folder"></i> Warehousing</div>
+                                <h3><a href="blog-details.html">Conditions for Applying C / O for <br> Transited Goods</a></h3>
+                                <div class="link">
+                                    <a href="blog-details.html" class="readmore-link"><i class="flaticon-up-arrow"></i>More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#top" class="w3-bar-item w3-button">Home</a>
-    <a href="#about" class="w3-bar-item w3-button">About</a>
-    <a href="{{route('admin.organization')}}" class="w3-bar-item w3-button">Organization</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
- 
-  </div>
-</div>
+    <!-- Map Section -->
+    <section class="map-section" id="contact">
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55945.16225505631!2d-73.90847969206546!3d40.66490264739892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1601263396347!5m2!1sen!2sbd" width="600" height="490" style="border:0; width: 100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section> 
 
+    <!-- Branches Section -->
+    <section class="branches-section">
+        <div class="auto-container">
+            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "2" }, "1200":{ "items" : "4" }}}'>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Hoxton - HO</h4>
+                    <div class="text"> Boat House, 152/21 City Road,
+                    Hoxton, N1 6NG, UK.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Melbourne</h4>
+                    <div class="text"> 46 Yarra Boulevard, 2nd Cross,
+                        Victoria 3010, AUS.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Houston</h4>
+                    <div class="text"> 3333 Raleigh Street, Houston,
+                        TX 77021, USA.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>New Delhi</h4>
+                    <div class="text">11/8, Shantipath, Chanakyapuri,
+                        New Delhi 110049, IND.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Hoxton - HO</h4>
+                    <div class="text"> Boat House, 152/21 City Road,
+                    Hoxton, N1 6NG, UK.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Melbourne</h4>
+                    <div class="text"> 46 Yarra Boulevard, 2nd Cross,
+                        Victoria 3010, AUS.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>Houston</h4>
+                    <div class="text"> 3333 Raleigh Street, Houston,
+                        TX 77021, USA.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+                <div class="single-info">
+                    <h4><span class="flaticon-cursor"></span>New Delhi</h4>
+                    <div class="text">11/8, Shantipath, Chanakyapuri,
+                        New Delhi 110049, IND.</div>
+                    <div class="link">
+                        <a href="#" class="readmore-link"><i class="flaticon-up-arrow"></i>View On Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
 
-<div class="w3-display-container">
-  <img src="{{asset('assets/front/img/sunshine.jpg')}}" alt="RLI International" style="width:100%;min-height:450px;max-height:100%;">
-  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-	<img src="{{asset('assets/front/img/top.jpg')}}" width="50%" align="right" padding-left="20px" style="border-radius:8px;padding-left:20px;width:50%;align:right" alt="RLI graduates">
-
-	<h3 class="w3-text-white" style="text-align:right"><em>&ldquo;No ray of sunshine is ever lost, but the green which it awakens into existence needs time to sprout, and it is not always granted for the sower to see the harvest.&rdquo;</em><br/>
-<b><span style="font-size:smaller">&mdash;Albert Schweitzer</span></b></h3>
-
-        <div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
-  
-  </div> 
-</div>
-
-
-<div class="w3-container w3-padding-32 w3-center" id="top">
-
-<h2 class="w3-text-blue"><b>The Rotary Leadership Insitute International</b></h2>
-<h4>Take your Rotary leadership skills to the next level with RLI</h4>
-
-  <div class="w3-content" style="max-width:1200px">
-<div class="w3-row-padding w3-blue w3-padding-32">
-
-<div class="w3-third w3-center" style="padding-left:30px">
-    <img src="img/logo.png" alt="RLI International" style="max-height:250px;">
-  <h2 align="center">Annual Dues</h2>
-	<p><b>How to pay annual dues:</b><br />
-	Please contact Paul Muczynski<br /> <b><a class="w3-text-yellow" href="mailto:pmuczynski@epix.net">pmuczynski@epix.net</a></b><br /> for information on paying annual dues.</p>
-
-</div>
-
-<div class="w3-twothird" style="text-align:left">
-	<div class="w3-card w3-white w3-padding">
-	<h3 align="center">What Is RLI International?</h3>
-<p>The Rotary Leadership Institute International (RLI) is a multi-district, grassroots leadership development program of member districts organized into regional divisions in various parts of the world.<br />
-						<br />
-RLI seeks to provide quality education in Rotary knowledge and leadership skills to Rotarians interested in developing their Rotary participation and to those identified by Rotary Clubs as having a potential in club leadership. These educational opportunities will teach skills that will benefit the members in their lives and in their volunteer service.<br />
-					<br />
-	<b><em>The Rotary Leadership Institute International is not an official training program of Rotary International.</em></b></p>
-
-	<p>&nbsp;</p>
-  </div>
-	</div>
-
-</div></div></div>
-
-
-<div class="review w3-hide-small">
-  <img src="{{asset('assets/front/img/reviews.jpg')}}" alt="RLI International" width="100%" style="object-fit:cover;">
-  <div class="topleft">
-		<div class="w3-center w3-blue w3-text-yellow w3-opacity w3-padding w3-padding-32" style="max-width: 1200px;margin:auto;text-align:center;">
-			<h2><b>What Participants Are Saying</b></h2>
-		</div>
-
-		<div class="w3-row-padding w3-padding-64">
-			<div class="w3-half w3-padding w3-padding-32">
-					<div class="w3-card w3-blue w3-opacity w3-padding">
-				<h4>&ldquo;Courses are fun, topical, and interactive . . . fast-paced and geared to refining leadership skills.&rdquo;</h4>
-<p style="font-size:smaller;text-align:right"><b>&mdash;BW, Maryland, USA</b></p>
-				</div>
-			</div>
-			<div class="w3-half w3-padding w3-padding-32">
-					<div class="w3-card w3-blue w3-opacity w3-padding">
-				<h4>&ldquo;Every Club President Nominee, Elect and President should attend RLI prior to taking office! Meaningful training beforehand provides knowledge.&rdquo;</h4>
-<p style="font-size:smaller;text-align:right"><b>&mdash;R.R., Atlanta, Georgia, USA</b></p>
-			</div>
-			</div>
-		<div>
-</div>
-</div></div></div>
-
-
-<div class="w3-hide-medium w3-hide-large">
-  <img src="img/reviews.jpg" alt="RLI International" width="100%">
-		<div class="w3-center w3-blue w3-text-white w3-padding w3-padding-32">
-			<h2><b>What Participants Are Saying</b></h2>
-				<h4>&ldquo;Courses are fun, topical, and interactive . . . fast-paced and geared to refining leadership skills.&rdquo;</h4>
-<p style="font-size:smaller;text-align:right"><b>&mdash;BW, Maryland, USA<br /></b></p>
-				<h4>&ldquo;Every Club President Nominee, Elect and President should attend RLI prior to taking office! Meaningful training beforehand provides knowledge.&rdquo;</h4>
-<p style="font-size:smaller;text-align:right"><b>&mdash;R.R., Atlanta, Georgia, USA</b></p>
-		<div>
-</div></div></div>
-
-
-
-<div class="w3-container w3-padding-32 w3-center">
-
-  <div class="w3-content" style="max-width:1200px">
-<div class="w3-row-padding w3-white w3-padding-64">
-
-<div class="w3-twothird" style="text-align:left; padding-left:30px;">
-<h2 align="center" id="about">About RLI</h2>
-<p>
-	<b>The Rotary Leadership Institute International is:</b><br />
-					<br />
-	&bull;&nbsp;A leadership and development program to strengthen Rotary Clubs through education, collaboration and the exchange of ideas among its future leaders..<br />
-					<br />
-	&bull;&nbsp;A three-part curriculum facilitated by experienced, trained faculty members who engage participants through open discussion, problem solving and creative role-play..<br />
-					<br />
-	&bull;&nbsp;A recommended program of Rotary International, more than 400 districts in 182 countries now offer it to their members..<br />
-					<br />
-	<b><em>The Rotary Leadership Institute International is not an official training program of Rotary International.</em></b><br />
-	  </p>
-</div>
-
-<div class="w3-third" style="text-align:left">
-	<div class="w3-card w3-blue w3-padding" style="font-weight:bold">
-	<h3 align="center">Forms To Get Started</h3>
-      <p><a href="https://rlifiles.com/files/en/Agreement-New.pdf">Agreement To Form a New Division</a></p>
-	<p><a href="https://rlifiles.com/files/en/AgreementToJoinAnExistingDivision.doc">Agreement For A District To Join An Existing Division</a></p>
-	<p><a href="https://rlifiles.com/files/en/Prospective-Handbook.pdf">Handbook for Prospective Divisions</a></p>
-	<p><a href="https://rlifiles.com/files/en/Notes_Fac.pdf">Notes for Organizations of New Divisions&mdash;Faculty Orientation</a></p>
-
-<p>&nbsp;</p>
-  </div>
-	</div>
-
-</div>
-
-
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:1200px">
- 
-
-  
-    <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'RLI');" id="myLink">
-        <div class="w3-col s4 tablink"><h3><b>What Is RLI</b></h3></div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Curriculum');">
-        <div class="w3-col s4 tablink"><h3><b>Current Curriculum</b></h3></div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Start');">
-        <div class="w3-col s4 tablink"><h3><b>How To Start</b></h3></div>
-      </a>
-    </div>
-
-    <div id="RLI" class="w3-container menu w3-padding-48 w3-card" style="text-align:left">
-      <p>RLI International is a grassroots coalition of Rotary districts implementing a leadership development program for "potential" leaders of Rotary CLUBS. Established in 1992, RLI has become a worldwide organization with divisions in every Continent of the world. While it is an unofficial program of Rotary International, it has substantial support of a number of past Rotary International Presidents and current, past and incoming R.I. Directors. (See Senior Leaders Advisory Board under Organizational Information). The R.I. Board has adopted a resolution recommending RLI or similar programs to the districts and the Council on Legislation has twice recommended RLI to the Board.</p>
-        <p>RLI believes that excellent CLUB leadership (all types of club leaders) is essential to the future of Rotary in a complex and fast changing world. Most Rotarians have not been exposed to the great scope of Rotary around the world and have not considered what leadership skills are necessary to move Rotary forward.</p>
-        <p>RLI strongly believes that a good Rotary Club leader must know the evolution of Rotary, its current status and activities in the world and have a vision for what Rotary can be in the future. Therefore, RLI provides a three day non-consecutive basic course in both Rotary knowledge and leadership skills, especially for voluntary organizations. In addition to the specific leadership skills sessions, all the RLI sessions have a leadership component.</p>
-        <p>In addition to the basic three day course, RLI holds in-<wbr>depth seminars on important Rotary subjects, including leadership, for the "graduates" of the basic course.</p>
-        <p>The mission of RLI is to have the clubs in the member districts identify those with the potential for future club leadership and send them to RLI courses at club expense. All member clubs may send any club Rotarian to RLI courses and any Rotarian may attend any course at his/her own initiative.</p>
-        <p>The overriding goal of the courses for club Rotarians is to create ENTHUSIASM for Rotary by opening up to them the world of Rotary outside of their own clubs and also showing them the great potential of Rotary service for the benefit of the world that can be furthered with excellent leadership in our clubs.</p>
-        <p>RLI is a general education program, while most Rotary International training programs are "job-specific"; that is R.I. trains Rotarians for specific positions. RLI is not a PETS or any other district training program, but graduates of RLI bring a greatly enhanced background in Rotary when they later attend job-<wbr>specific programs. </p>
-        <p>The Handbook for Prospective Divisions, set forth on this Website, is a good source of information for all those considering RLI membership.</p>
-    </div>
-
-    <div id="Curriculum" class="w3-container menu w3-padding-48 w3-card" style="text-align:left">
-      <p>RLI recommends a curriculum and provides all outlines, etc. to all its divisions. The curriculum has been continually revised and upgraded over the years. Because of the growth of RLI, it is expected that major revisions will be recommended every three years in order to give divisions a sufficient opportunity to orient their faculty members and to provide translations where necessary. All important changes of R.I. or the Foundation are provided annually to all divisions. All curriculum materials and all available translations are posted on the RLI materials website available to all members. </p>
-        <p>The RLI Curriculum Committee meets annually and all divisions are requested to provide suggestions for revision and improvement based on their own experiences. Any division may send representatives to the meetings of the Curriculum Committee. </p>
-        <p>The current recommended curriculum for 2015-18 has the following course sessions:</p>
-
-<p class="w3-center"><b>PART I</b> <br />
-Insights Into Leadership<br />
-My Rotary World<br />
-Ethics-Vocation Service<br />
-Foundation I: Our Foundation<br />
-Engaging Members<br />
-Creating Service Projects<br />
-<br />
-<b>PART II</b><br />
-Strategic Planning & Analysis<br />
-Attracting Members<br />
-Club Communication<br />
-Team Building<br />
-Foundation II: Targeted Service<br />
-<br />
-<b>PART III</b><br />
-Rotary Opportunities<br />
-Effective Leadership Strategies<br />
-Foundation III: International Service<br />
-Public Image & Public Relations<br />
-Building A Stronger Club<br />
-Making A Difference</p>
- 
-    </div>  
-
-    <div id="Start" class="w3-container menu w3-padding-48 w3-card" style="text-align:left">
-      <p>In order to provide effective grassroots administration of RLI and to deal with regional variations, RLI created the division system in 2002. A "division" is created by an agreement signed by the District Governor(s) of the first member district(s) and a representative of the umbrella organization of RLI, the International RLI or just RLI. The form of Agreement to Form a Division is included in this section (see Index) as is the form of Agreement for a District to Join an Existing Division.</p>
-        <p>Those interested in initiating a division of RLI should contact the International Chair or an International Regional Vice-Chair. An interested party may also use "Contact Us" on the Home Page.</p>
-        <p>Each division pays to the umbrella international organization annual dues determined by the number of districts within the division. The current dues are US $100.00 per member district per year. The dues plus contributions over and above the dues are used to defray administrative and promotional expenses for the International RLI and provide faculty orientation programs for new divisions. The annual financial statement is posted on this Website.</p>
-        <p>After an agreement is signed, a division completes its organization, adopts bylaws, elects officers and begins planning for the first faculty orientation sessions and the first Part I course(s). Arrangements are made with the International Training Team to visit the Division to conduct the first faculty orientation program. At the faculty orientation sessions, the training team also meets with division leaders to discuss organization, planning courses, etc.</p>
-        <p><b>The International RLI:</b><br />
-Assigns the trainers (usually two) and pays for the transportation of the team to the first site in the Division. The trainers provide the agenda, the PowerPoint or overhead slides used in the training, RLI pins and certificates (although certificates can be downloaded from the materials website.)</p>
-        <p><b>The Division:</b><br />
-Arranges for the meeting site and audiovisual equipment, etc., provides airport transfers for the team to and from the designated hotel, and provides hotel accommodations for the team, meals, etc. during their stay,-usually two-three days or as arranged between RLI and the Division. The Division copies the materials for the faculty members as agreed with the RLI team.</p>
-        <p>Full information is provided to the Division in advance of the team visit.</p>
-        <p>The Division leadership recruits the faculty members who should be knowledgeable Rotarians, usually past governors or directors and sometimes well qualified past club presidents. Faculty members should be able to lead a lively discussion group without lecturing. The number of faculty members to be trained should be discussed by the Division leaders with the RLI training team.</p>
-        <p>Those trained to be faculty members (discussion leaders for course sessions) will conduct the first Part I course(s). It is recommended that courses be held within a month or two after the faculty orientation sessions. Further faculty orientations are either conducted by division trainers or members of the International Training Team whose names and language abilities will be communicated to the division.</p><br>
-    
-    </div>  
-<p>&nbsp;</p>
-  </div>
-</div>
-	</div></div>
-
-  <div class="w3-container w3-padding-large w3-grey w3-center">
-    <h4 id="contact"><b>Contact RLI</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-blue">
-        <p><i class="fa fa-envelope w3-xlarge w3-text-light-grey"></i></p>
-        <p><a href="mailto:info@rotaryleadershipinstitute.org">info@rotaryleadershipinstitute.org</a><br /></p>
-        <p>webmasters: <a href="mailto:lou@arkett.com">Lou Okell</a><a href="mailto:zalles@gmail.com"> &amp; Nicola&#769;s Zalles</a></p>
-        <p><br /></p>
-        <p><i class="fa fa-wifi w3-xxlarge w3-text-light-grey"></i></p>
-        <p><a href="https://rlifiles.com/">RLI Files website<br />
-	https://rlifiles.com</a></p>
-        <p><br /></p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><a href="mailto:info@rotaryleadershipinstitute.org"><i class="fa fa-envelope w3-xlarge w3-text-light-grey"></i></a></p>
-        <p>PRID Michael K. McGovern<br />
-	International Chair<br />
-	mkmcee@gmail.com<br />
-<br />
-	PDG Knut Johnsen<br />
-	Intl. Vice-Chair, Operations<br />
-	knutjohnsen@att.net<br />
-<br />
-	PDG Frank Wargo<br />
-	Intl. Vice-Chair, Training<br />
-	Frank.wargo@snet.net</p>
-      </div>
-      <div class="w3-third w3-blue">
-        <p><a href="mailto:info@rotaryleadershipinstitute.org"><i class="fa fa-envelope w3-xlarge w3-text-light-grey"></i></a></p>
-        <p>PDG Paul Muczynski<br />
-	International Treasurer<br />
-	pmuczynski@epix.net<br />
-<br />
-	PDG Penny Byron<br />
-	International Communications Director<br />
-	pennybyronRLI@gmail.com<br />
-<br />
-	PDG Gregory B. Roche<br />
-	International IT Director<br />
-	gregroche@outlook.com</p>
-      </div>
-    </div>
-
-  </div>
-
-
-<footer class="w3-container w3-padding-32 w3-black w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/Rotary-Leadership-Institute-829321397145897/" title="Facebook"><i class="fab fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-blue w3-hide-small" href="https://www.linkedin.com/groups/10324969" title="Linkedin"><i class="fab fa-linkedin"></i></a>
-  <p>All content copyright 2021 The Rotary Leadership Institute International. All rights reserved.</p>
-
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-redoak w3-hide-small">Go To Top</span>   
-    <a class="w3-button w3-theme" href="#myPage" title="top of page"><span class="w3-xlarge">
-    <i class="fas fa-chevron-circle-up"></i></span></a>
-  </div>
-</footer>
-
-<script>
-
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
-<script>
-
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-</script>
-
-</body>
-
-
-</html>
+    <section class="newsletter-section">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3><span class="flaticon-email"></span> Subscribe Our Newsletter <br> & Get Updates.</h3>
+                </div>
+                <div class="col-lg-7">
+                    <div class="newsletter-form">
+                        <form class="ajax-sub-form" method="post">
+                            <div class="form-group">
+                                <i class="far fa-envelope-open"></i>
+                                <input type="email" placeholder="Enter Your Email Address..." id="subscription-email">
+                                <button type="submit" class="theme-btn btn-style-one"><span><i class="flaticon-up-arrow"></i>Subscribe</span></button>
+                                <label class="subscription-label" for="subscription-email"></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+@endsection

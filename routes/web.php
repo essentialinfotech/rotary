@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-});
-
-Route::get('front/organization','Admin\AdminController@organization')->name('admin.organization');
-Route::get('front/rlifiles','Admin\AdminController@rlifiles')->name('admin.rlifiles');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
-Route::get('admin/login','Admin\AdminController@adminLogin')->name('admin.admin_login');
-Route::post('admin/login','Admin\AdminController@login')->name('admin.login');
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['middleware'=>['admin']],function(){
-    Route::get('admin/dashboard','Admin\AdminController@dashboard')->name('admin.dashboard');
-    Route::get('admin/update-password','Admin\AdminController@updatePasswordForm')->name('admin.password.form');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [FrontController::class, 'index'])->name('index.home');
+Route::match(['get','post'],'/admin/login', [AdminController::class, 'login'])->name('admin.login');
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('index.dashboard');
+
+
+
+//Slider
+Route::get('admin/slider', [SliderController::class, 'index'])->name('admin.slider.index');
+Route::get('admin/slider/create', [SliderController::class, 'create'])->name('admin.slider.create');
+Route::get('admin/slider/edit/{id}', [SliderController::class, 'edit'])->name('admin.slider.edit');
+Route::match(['get','post'],'admin/slider/insert', [SliderController::class, 'insert'])->name('admin.slider.insert');
+Route::match(['get','post'],'admin/slider/edit/{id}', [SliderController::class, 'update'])->name('admin.slider.update');
+Route::get('admin/slider/update-status/{id}/{status}', [SliderController::class, 'updateStatus']);
+Route::match(['get','post'],'admin/delete-slider/{id}', [SliderController::class, 'delete'])->name('admin.delete-slider');
